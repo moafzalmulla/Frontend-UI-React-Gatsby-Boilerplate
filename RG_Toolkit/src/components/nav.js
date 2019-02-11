@@ -6,11 +6,12 @@ const Nav = ({ siteTitle }) => (
   <nav>
     <div>
         <Link><h2>Brand</h2></Link>
-        <Link to="/page-2"> Design Components</Link>
-        <Link to="/page-3">Layout Components</Link>
-        <Link to="/page-4">GDS Components</Link>
-        <Link to="/page-5">Components</Link>
-        <Link to="/page-6">Downloads</Link>
+        <Link to="/get-started/">Get Started </Link>
+        <Link to="/design-components/">Design</Link>
+        <Link to="/layout-components/">Layout</Link>
+        <Link to="/functional-components/">Functional </Link>
+        <Link to="/downloads/">Downloads </Link>
+
     </div>
   </nav>
 )

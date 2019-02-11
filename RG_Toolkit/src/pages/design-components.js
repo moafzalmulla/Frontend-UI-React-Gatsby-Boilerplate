@@ -8,21 +8,18 @@ import Highlight from 'react-highlight'
 import 'highlight.js/styles/vs2015.css'
 
 
-const SecondPage = () => (
+const Design = () => (
   
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Design Components" />
     <div>
     <h1>Design Components</h1>
     <h2>Render</h2>
     <pre>
       <div>
         <html>
-          <header>
-            <title>Title</title>
-          </header>
           <body>
-            Content
+            <button>Save changes</button>
           </body>
         </html>
       </div>
@@ -33,21 +30,18 @@ const SecondPage = () => (
     {`   
       <div>
       <html>
-        <header>
-          <title>Title</title>
-        </header>
         <body>
-          Content
+          <button>Save changes</button>
         </body>
       </html>
     </div>
     `}
     </Highlight>
 
-    <p>Welcome to page 2</p>
+    {/* <p>Welcome to page 2</p> */}
     </div>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
 
-export default SecondPage
+export default Design
