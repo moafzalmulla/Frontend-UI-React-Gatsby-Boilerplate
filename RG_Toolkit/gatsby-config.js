@@ -31,7 +31,8 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
     // in gatsby-config.js
-   `gatsby-plugin-sass`
+   `gatsby-plugin-sass`,
+   
   ],
 }
 

@@ -4,9 +4,9 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Nav from "./nav"
-
 import "./layout.scss"
-
+// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+// require("prismjs/plugins/line-numbers/prism-line-numbers.css")
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
