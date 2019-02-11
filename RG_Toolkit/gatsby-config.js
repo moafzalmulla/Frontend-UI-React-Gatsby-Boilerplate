@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `React / Gatsby UI Toolkit Boilerplate`,
+    description: `Use this frontend UI Boilerplate to build a Frontend Toolkit for your Organisation, Business, Local Authority, Startup, etc`,
+    author: `@tweetzal`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,5 +30,9 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+    // in gatsby-config.js
+   `gatsby-plugin-sass`
   ],
 }
+
+
