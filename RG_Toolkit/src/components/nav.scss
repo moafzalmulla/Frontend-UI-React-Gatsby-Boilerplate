@@ -1,29 +1,31 @@
 Nav {
-    div{
+    div.sideBarNav{
         background: #FFAE1E;
-        width: 200px;
+        width: 250px;
         float: left;
         position: fixed;
         height: 100vh;
         left:0;
         top:0;
+        border-right: solid 1px #FFAE1E;
+
             a{
                 width: 100%;
                 float: left;
                 padding: 20px;
                 color:white;
                 text-decoration: none;
-                border-bottom: dashed 1px white;
                 cursor: pointer;
+                &.kit-brand{
+                  height: 100px;
+                }
                 &:hover{
                     background: black;
                     color:white;
                     cursor: pointer;
                     text-decoration: none;
                 }
-                &.kit-brand{
-                  height: 100px;
-                }
+                
             }
 
     }
