@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Nav from "./nav"
+import SidebarNav from "./nav"
 import "./layout.scss"
 // import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 // require("prismjs/plugins/line-numbers/prism-line-numbers.css")
@@ -21,7 +21,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Nav />
+        <SidebarNav />
 
         <div
           style={{

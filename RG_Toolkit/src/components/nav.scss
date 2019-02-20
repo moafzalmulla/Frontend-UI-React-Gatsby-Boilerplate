@@ -17,8 +17,15 @@ Nav {
                 cursor: pointer;
                 &:hover{
                     background: black;
+                    color:white;
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+                &.kit-brand{
+                  height: 100px;
                 }
             }
+
     }
 }
 .gatsby-highlight-code-line {
