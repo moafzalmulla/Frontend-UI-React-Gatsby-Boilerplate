@@ -1,5 +1,6 @@
 import "./accordion-item.scss"
 import React from "react"
+import { Link } from "gatsby"
 
 
 class AccordionItem extends React.Component {
@@ -22,7 +23,9 @@ class AccordionItem extends React.Component {
       return (
               <div className={activeClass} onClick={this.toggle}>
                 <span className="summary">{question.summary}</span>
-                <span className="folding-pannel answer">{question.answer}</span>
+                <span className="folding-pannel answer">
+                <Link to="/layout-components/">{question.answer}</Link>
+                </span>
               </div>
       );
     }

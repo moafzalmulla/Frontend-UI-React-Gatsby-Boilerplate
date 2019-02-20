@@ -40,6 +40,9 @@ $underLine:#FFAE1E;
     border-bottom: 2px solid;
     border-color: $underLine;
     cursor: pointer;
+    width:100%;
+    float:left;
+    background:white;
     // transition: border-color 0.5s ease-in;
   }
 }
@@ -82,7 +85,7 @@ $underLine:#FFAE1E;
 //   transform: perspective(250px) rotateX(-90deg);
   transition: all 0.2s ease-in-out;
   height: 0;
-  opacity: 0;
+  display: none;
   cursor: pointer;
 
 }
