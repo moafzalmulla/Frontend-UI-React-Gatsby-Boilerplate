@@ -7,7 +7,9 @@ class AccordionItem extends React.Component {
     constructor() {
       super();
       this.state = {
-        active: false
+        active: false,
+        layoutSubLinks: layoutLinks,
+
       };
       this.toggle = this.toggle.bind(this);
     }
@@ -24,12 +26,30 @@ class AccordionItem extends React.Component {
               <div className={activeClass} onClick={this.toggle}>
                 <span className="summary">{question.summary}</span>
                 <span className="folding-pannel answer">
-                <Link to="/layout-components/">{question.answer}</Link>
+                <Link to={question.url}>{question.answer}</Link>
+
                 </span>
               </div>
       );
     }
   }
+
+
+  const layoutLinks = {
+      subLink1: {
+        title:'Template 1', 
+        url: '/template-1/',
+      },
+      subLink2: {
+        title:'Template 2', 
+        url: '/template-2/',
+      },
+      subLink3: {
+        title:'Template 3', 
+        url: '/template-3/',
+      }
+  };
+
 
   export default AccordionItem
   
