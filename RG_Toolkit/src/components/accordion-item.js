@@ -1,6 +1,7 @@
 import "./accordion-item.scss"
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
+import AccordionItemChildWrapper from "./accordion-item-child-wrapper"
 
 
 class AccordionItem extends React.Component {
@@ -8,10 +9,10 @@ class AccordionItem extends React.Component {
       super();
       this.state = {
         active: false,
-        layoutSubLinks: layoutLinks,
-
+        submenu: 0
       };
       this.toggle = this.toggle.bind(this);
+
     }
     toggle() {
       this.setState({
@@ -19,37 +20,24 @@ class AccordionItem extends React.Component {
         className: "active"
       });
     }
-    render() {
-      const activeClass = this.state.active ? "active" : "inactive";
-      const question = this.props.details;
-      return (
-              <div className={activeClass} onClick={this.toggle}>
-                <span className="summary">{question.summary}</span>
-                <span className="folding-pannel answer">
-                <Link to={question.url}>{question.answer}</Link>
 
+    render() {
+      // const activeClass = this.state.active ? "active" : "inactive";
+      const activeClass = this.state.active ? "active" : "active";
+
+      const primaryMenu = this.props.details;
+      return (
+              <div className={'accordion-item ' + activeClass} onClick={this.toggle}>
+                <span className="summary">{primaryMenu.title}</span>
+                <span className="folding-pannel answer">
+                <AccordionItemChildWrapper menuParent={primaryMenu.child}  />
                 </span>
               </div>
       );
     }
   }
 
-
-  const layoutLinks = {
-      subLink1: {
-        title:'Template 1', 
-        url: '/template-1/',
-      },
-      subLink2: {
-        title:'Template 2', 
-        url: '/template-2/',
-      },
-      subLink3: {
-        title:'Template 3', 
-        url: '/template-3/',
-      }
-  };
-
-
   export default AccordionItem
+  
+
   

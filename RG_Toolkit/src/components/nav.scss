@@ -29,6 +29,38 @@ Nav {
                 
             }
 
+            div.accordion-item{
+              width: 100%;
+              float: left;
+              // padding: 20px;
+              color:white;
+              text-decoration: none;
+              cursor: pointer;
+              background: white;
+              color:black;
+              &:hover{
+                  background: white;
+                  color:#FFAE1E;
+                  cursor: pointer;
+                  text-decoration: none;
+              }
+              a{
+                background: grey;
+                color:white;
+                &:hover{
+                  background: white;
+                  color:grey;
+                  cursor: pointer;
+                  text-decoration: none;
+                }
+                &[aria-current=page]{
+                color: white;
+                background:#3a3042;
+                }
+              }
+              
+          }
+
     }
 }
 .gatsby-highlight-code-line {

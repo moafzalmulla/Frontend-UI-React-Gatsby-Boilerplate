@@ -1,4 +1,4 @@
-import "./accordion-item.scss"
+import "./accordion.scss"
 import React from "react"
 import AccordionItem from "./accordion-item"
 
@@ -9,45 +9,28 @@ import AccordionItem from "./accordion-item"
       super();
       // map questions object to state
       this.state = {
-        questions: sampleQuestions,
+        menu: primaryMenu,
       };
       // bind functional chil component
-      this.renderQuestion = this.renderQuestion.bind(this);
+      this.renderPrimaryMenu = this.renderPrimaryMenu.bind(this);
     }
     //pass key as a prop - react uses key as identifier for react dom
-    renderQuestion(key) {
-      return <AccordionItem key={key} index={key} details={this.state.questions[key]} />
+    renderPrimaryMenu(key) {
+      return <AccordionItem key={key} index={key} details={this.state.menu[key]} menuParent={this.state.menu.child} />
     }
     // map in render using key props, and map functional component
     render() {
       return(
-          <div className="accordion-container">{Object.keys(this.state.questions).map(this.renderQuestion)} </div>
+          <div className="accordion-container">{Object.keys(this.state.menu).map(this.renderPrimaryMenu)} </div>
       )
     }
   }
 
-  const sampleQuestions = {
-    question1: {summary:'Design Patterns', answer:'Design', url: '/design-components/'},
-    question2: {summary:'Layout', answer:'Templates', url: '/layout-components/'},
-    question3: {summary:'Functional', answer:'Form components', url: '/functional-components/'},
-    question4: {summary:'Downloads', answer:'Sketch Downloads', url: '/dowloads/'},
-    question5: {
-      summary:'Layout', 
-      url: '/design-components/',
-      subLink1: {
-        title:'Template 1', 
-        url: '/template-1/',
-      },
-      subLink2: {
-        title:'Template 2', 
-        url: '/template-2/',
-      },
-      subLink3: {
-        title:'Template 3', 
-        url: '/template-3/',
-      }
-    },
-
+  const primaryMenu = {
+    menu1: {title:'Design Patterns', child: '1' },
+    menu2: {title:'Layout',  child: '2' },
+    menu3: {title:'Functional', child: '3'  },
+    menu4: {title:'Downloads',  child: '4' },
   };
 
   export default Accordion
